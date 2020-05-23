@@ -15,6 +15,23 @@
       <ul>
         <li>
           <a href="catalog.html">Каталог</a>
+          <ul>
+            <li>
+              <a href="blank.html">Новинки</a>
+            </li>
+            <li>
+              <a href="catalog.html">Сливочное</a>
+            </li>
+            <li>
+              <a href="blank.html">Щербеты</a>
+            </li>
+            <li>
+              <a href="blank.html">Фрутковый лед</a>
+            </li>
+            <li>
+              <a href="blank.html">Мелорин</a>
+            </li>
+          </ul>
         </li>
         <li>
           <a href="blank.html">Доставка и оплата</a>
@@ -25,8 +42,45 @@
       </ul>
       <div>
         <a href="blank.html">Поиск</a>
+        <form action="https://echo.htmlacademy.ru/" method="GET">
+          <label for="search" class="visually-hidden">Поиск</label>
+          <input type="search" id="search" placeholder="Что ищем?">
+        </form>
         <a href="blank.html">Вход</a>
+        <form action="https://echo.htmlacademy.ru/" method="post">
+          <label for="login-email" class="visually-hidden">Введите ваш email</label>
+          <input type="email" name="email" id="login-email" placeholder="Электронная почта" required>
+          <label for="password-field" class="visually-hidden">Введите Ваш пароль</label>
+          <input type="text" name="password" id="password-field" placeholder="Пароль" required>
+          <div class="buttons">
+            <input type="submit" value="Войти">
+          </div>
+          <a href="blank.html">Забыли пароль?</a>
+          <a href="blank.html">Новая регистрация</a>
+        </form>
         <a href="blank.html">Корзина</a>
+        <div>
+          <ul>
+            <li>
+              <a href="blank.html">
+                <img src="img/moroj1.jpg" width="33" height="33" alt="Пломбир с апельсиновым джемом">
+              </a>
+              <a href="blank.html">Пломбир с апельсиновым джемом</a>
+              <span>1,5 кг х 200 руб.</span>
+              <span>300 руб.</span>
+            </li>
+            <li>
+              <a href="blank.html">
+                <img src="img/moroj3.jpg" width="33" height="33" alt="Клубничный пломбир с присыпкой из белого шоколада">
+              </a>
+              <a href="blank.html">Клубничный пломбир с присыпкой из белого шоколада</a>
+              <span>1,5 кг х 300 руб.</span>
+              <span>450 руб.</span>
+            </li>
+          </ul>
+          <span>Итого:</span><span>750 руб.</span>
+          <a href="blank.html">Оформить заказ</a>
+        </div>
         <div>
           <p>с 10 до 20, ежедневно</p>
           <a href="tel:88124502525">8 812 450-25-25</a>
@@ -37,10 +91,10 @@
 
   <main>
 
-    <h1>Глейси шоп</h1>
+    <h1 class="visually-hidden">Глейси шоп</h1>
 
     <section>
-      <h2>Слайдер</h2>
+      <h2 class="visually-hidden">Слайдер</h2>
       <div class="main-slider">
         <div class="slider-items">
           <div class="slider-item">
@@ -58,7 +112,7 @@
     </section>
 
     <section>
-      <h2>Акции</h2>
+      <h2 class="visually-hidden">Акции</h2>
       <div>
         <span>Малинка даром!</span>
         <p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку маринового варенья бесплатно.</p>
@@ -72,7 +126,7 @@
     </section>
 
     <section>
-      <h2>Популярные товары</h2>
+      <h2 class="visually-hidden">Популярные товары</h2>
       <ul>
         <li>
           <div>
@@ -145,14 +199,20 @@
     </article>
 
     <section>
-      <h3>Подписка на рассылку</h3>
+      <h3 class="visually-hidden">Подписка на рассылку</h3>
       <p>Подпишитесь на нашу сладкую рассылку и будьте всегда в курсе всего самого вкусного, что у нас происходит.
         Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
-      <!-- Здесь будет форма записи -->
+      <form action="https://echo.htmlacademy.ru/" method="post">
+        <label for="subscription-email" class="visually-hidden">Введите ваш email</label>
+        <input type="email" name="email" id="subscription-email" placeholder="Электронная почта" required>
+        <div class="buttons">
+          <input type="submit" value="Отправить">
+        </div>
+      </form>
     </section>
 
     <section>
-      <h3>Карта</h3>
+      <h3 class="visually-hidden">Карта</h3>
       <!--Здесь будет карта-->
       <div>
         <p>Адрес главного офиса и офлайн-магазина:</p>
@@ -199,6 +259,22 @@
       Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> © 2020
     </p>
   </footer>
+  <div class="modals">
+    <form action="https://echo.htmlacademy.ru/" method="post">
+      <fieldset>
+        <legend>Мы обязательно вам ответим!</legend>
+        <label for="feedback-name" class="visually-hidden">Введите ваше имя</label>
+        <input type="text" name="username" id="feedback-name" placeholder="Как вас зовут?" required>
+        <label for="feedback-email" class="visually-hidden">Введите ваш email</label>
+        <input type="email" name="email" id="feedback-email" placeholder="Ваша почта для ответа?" required>
+        <label for="feedback-text" class="visually-hidden">Напишите что-нибудь</label>
+        <textarea name="text" id="feedback-text" placeholder="Напишите что-нибудь..."></textarea>
+        <div class="buttons">
+          <input type="submit" value="Отправить">
+        </div>
+      </fieldset>
+    </form>
+  </div>
 </body>
 
 </html>

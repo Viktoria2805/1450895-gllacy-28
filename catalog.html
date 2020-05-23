@@ -15,6 +15,23 @@
       <ul>
         <li>
           <a href="catalog.html">Каталог</a>
+          <ul>
+            <li>
+              <a href="blank.html">Новинки</a>
+            </li>
+            <li>
+              <a href="catalog.html">Сливочное</a>
+            </li>
+            <li>
+              <a href="blank.html">Щербеты</a>
+            </li>
+            <li>
+              <a href="blank.html">Фрутковый лед</a>
+            </li>
+            <li>
+              <a href="blank.html">Мелорин</a>
+            </li>
+          </ul>
         </li>
         <li>
           <a href="blank.html">Доставка и оплата</a>
@@ -25,8 +42,45 @@
       </ul>
       <div>
         <a href="blank.html">Поиск</a>
+        <form action="https://echo.htmlacademy.ru/" method="GET">
+          <label for="search" class="visually-hidden">Поиск</label>
+          <input type="search" id="search" placeholder="Что ищем?">
+        </form>
         <a href="blank.html">Вход</a>
+        <form action="https://echo.htmlacademy.ru/" method="post">
+          <label for="login-email" class="visually-hidden">Введите ваш email</label>
+          <input type="email" name="email" id="login-email" placeholder="Электронная почта" required>
+          <label for="password-field" class="visually-hidden">Введите Ваш пароль</label>
+          <input type="text" name="password" id="password-field" placeholder="Пароль" required>
+          <div class="buttons">
+            <input type="submit" value="Войти">
+          </div>
+          <a href="blank.html">Забыли пароль?</a>
+          <a href="blank.html">Новая регистрация</a>
+        </form>
         <a href="blank.html">Корзина</a>
+        <div>
+          <ul>
+            <li>
+              <a href="blank.html">
+                <img src="img/moroj1.jpg" width="33" height="33" alt="Пломбир с апельсиновым джемом">
+              </a>
+              <a href="blank.html">Пломбир с апельсиновым джемом</a>
+              <span>1,5 кг х 200 руб.</span>
+              <span>300 руб.</span>
+            </li>
+            <li>
+              <a href="blank.html">
+                <img src="img/moroj3.jpg" width="33" height="33" alt="Клубничный пломбир с присыпкой из белого шоколада">
+              </a>
+              <a href="blank.html">Клубничный пломбир с присыпкой из белого шоколада</a>
+              <span>1,5 кг х 300 руб.</span>
+              <span>450 руб.</span>
+            </li>
+          </ul>
+          <span>Итого:</span><span>750 руб.</span>
+          <a href="blank.html">Оформить заказ</a>
+        </div>
         <div>
           <p>с 10 до 20, ежедневно</p>
           <a href="tel:88124502525">8 812 450-25-25</a>
@@ -47,14 +101,15 @@
         Сливочное
       </li>
     </ul>
+
     <h1>Сливочное мороженое</h1>
 
     <section>
-      <h2>Фильтр товаров</h2>
+      <h2 class="visually-hidden">Фильтр товаров</h2>
       <!-- Здесь будет форма фильтра -->
     </section>
     <section>
-      <h2>Товары</h2>
+      <h2 class="visually-hidden">Товары</h2>
       <ul>
         <li>
           <a href="blank.html">

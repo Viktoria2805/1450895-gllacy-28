@@ -126,8 +126,46 @@
 
     <section>
       <h2 class="visually-hidden">Фильтр товаров</h2>
-      <!-- Здесь будет форма фильтра -->
+      <form action="https://echo.htmlacademy.ru/" method="GET">
+        <fieldset>
+          <legend>Cортировка:</legend>
+          <label for="sort" class="visually-hidden">Сортировка мороженого</label>
+          <select name="sort" id="sort">
+            <option value="popularity">по популярности</option>
+          </select>
+        </fieldset>
+        <fieldset>
+          <legend>Цена: 100 ₽ – 500 ₽</legend>
+          <div> <!-- Здесь будет слайдер--></div>
+        </fieldset>
+        <fieldset>
+          <legend>Жирность:</legend>
+          <label for="null-fatness">0%</label>
+          <input type="radio" name="fatness" id="null-fatness" value="0%">
+          <label for="ten-fatness">до 10%</label>
+          <input type="radio" name="fatness" id="ten-fatness" value="до 10%" checked>
+          <label for="thirty-fatness">до 30%</label>
+          <input type="radio" name="fatness" id="thirty-fatness" value="до 30%">
+          <label for="over-thirty-fatness">выше 30%</label>
+          <input type="radio" name="fatness" id="over-thirty-fatness" value="выше 30%">
+        </fieldset>
+        <fieldset>
+          <legend>Наполнители:</legend>
+          <label for="chocolate">шоколадные</label>
+          <input type="checkbox" name="chocolate" id="chocolate" value="chocolate" checked>
+          <label for="sugar-powders">сахарные присыпки</label>
+          <input type="checkbox" name="sugar-powders" id="sugar-powders" value="sugar-powders" checked>
+          <label for="fruits">фрукты</label>
+          <input type="checkbox" name="fruits" id="fruits" value="fruits">
+          <label for="syrups">сиропы</label>
+          <input type="checkbox" name="syrups" id="syrups" value="syrups">
+          <label for="jams">джемы</label>
+          <input type="checkbox" name="jams" id="jams" value="jams">
+        </fieldset>
+        <button type="submit">Применить</button>
+      </form>
     </section>
+
     <section>
       <h2 class="visually-hidden">Товары</h2>
       <ul>

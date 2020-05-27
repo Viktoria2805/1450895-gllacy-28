@@ -4,18 +4,20 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Глейси</title>
+  <link href="css/normalize.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
 </head>
 
-<body>
+<body class="site-wrapper">
   <header>
     <a href="index.html">
       <img src="img/logo.svg" width="154" height="64" alt="Логотип GllacyShop магазин мороженого">
     </a>
     <nav>
-      <ul>
+      <ul class="main-menu">
         <li>
           <a href="catalog.html">Каталог</a>
-          <ul>
+          <ul class="sub-menu">
             <li>
               <a href="blank.html">Новинки</a>
             </li>
@@ -40,14 +42,14 @@
           <a href="blank.html">О компании</a>
         </li>
       </ul>
-      <div>
+      <div class="user-navigation">
         <a href="blank.html">Поиск</a>
-        <form action="https://echo.htmlacademy.ru/" method="GET">
+        <form class="search-form" action="https://echo.htmlacademy.ru/" method="GET">
           <label for="search" class="visually-hidden">Поиск</label>
           <input type="search" id="search" placeholder="Что ищем?">
         </form>
         <a href="blank.html">Вход</a>
-        <form action="https://echo.htmlacademy.ru/" method="post">
+        <form class="auth-form" action="https://echo.htmlacademy.ru/" method="post">
           <label for="login-email" class="visually-hidden">Введите ваш email</label>
           <input type="email" name="email" id="login-email" placeholder="Электронная почта" required>
           <label for="password-field" class="visually-hidden">Введите Ваш пароль</label>
@@ -57,7 +59,7 @@
           <a href="blank.html">Новая регистрация</a>
         </form>
         <a href="blank.html">Корзина</a>
-        <div>
+        <div class="cart">
           <table>
             <tr>
               <td>
@@ -101,16 +103,16 @@
           <span>Итого:</span><span>750 руб.</span>
           <a href="blank.html">Оформить заказ</a>
         </div>
-        <div>
+        <div class="header-contacts">
           <p>с 10 до 20, ежедневно</p>
-          <a href="tel:88124502525">8 812 450-25-25</a>
+          <a href="tel:88124502525" class="header-contacts__tel">8 812 450-25-25</a>
         </div>
       </div>
     </nav>
   </header>
   <main>
 
-    <ul>
+    <ul class="breadcrumbs">
       <li>
         <a href="index.html">Главная</a>
       </li>
@@ -122,7 +124,7 @@
       </li>
     </ul>
 
-    <h1>Сливочное мороженое</h1>
+    <h1 class="main-title">Сливочное мороженое</h1>
 
     <section>
       <h2 class="visually-hidden">Фильтр товаров</h2>
@@ -168,90 +170,90 @@
 
     <section>
       <h2 class="visually-hidden">Товары</h2>
-      <ul>
+      <ul  class="products-item">
         <li>
           <a href="blank.html">
             <img src="img/moroj1.jpg" width="267" height="267" alt="Мороженое сливочное с апельсиновым джемом и цитрусовой стружкой">
           </a>
-          <div>310 ₽<span>/кг</span></div>
-          <a href="blank.html">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
+          <div class="value">310<span class="weight">/кг</span></div>
+          <a class="products-item__title" href="blank.html">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
         </li>
         <li>
           <a href="blank.html">
             <img src="img/moroj2.jpg" width="267" height="267" alt="Мороженое сливочно-кофейное с кусочками шоколада">
           </a>
-          <div>380 ₽<span>/кг</span></div>
-          <a href="blank.html">Сливочно-кофейное с кусочками шоколада</a>
+          <div class="value">380 <span class="weight">/кг</span></div>
+          <a class="products-item__title" href="blank.html">Сливочно-кофейное с кусочками шоколада</a>
         </li>
         <li>
           <a href="blank.html">
             <img src="img/moroj3.jpg" width="267" height="267" alt="Мороженое сливочно-клубничное с присыпкой из белого шоколада">
           </a>
-          <div>355 ₽<span>/кг</span></div>
-          <a href="blank.html">Сливочно-клубничное с присыпкой из белого шоколада</a>
+          <div class="value">355 <span class="weight">/кг</span></div>
+          <a class="products-item__title" href="blank.html">Сливочно-клубничное с присыпкой из белого шоколада</a>
         </li>
         <li>
           <a href="blank.html">
             <img src="img/moroj4.jpg" width="267" height="267" alt="Мороженое сливочное крем-брюле с карамельной подливкой">
           </a>
-          <div>415 ₽<span>/кг</span></div>
-          <a href="blank.html">Сливочное крем-брюле с карамельной подливкой</a>
+          <div class="value">415 <span class="weight">/кг</span></div>
+          <a class="products-item__title" href="blank.html">Сливочное крем-брюле с карамельной подливкой</a>
         </li>
         <li>
           <a href="blank.html">
             <img src="img/moroj5.jpg" width="267" height="267" alt="Мороженое сливочное с брусничным джемом">
           </a>
-          <div>325 ₽<span>/кг</span></div>
-          <a href="blank.html">Сливочное с брусничным джемом</a>
+          <div class="value">325 <span class="weight">/кг</span></div>
+          <a class="products-item__title" href="blank.html">Сливочное с брусничным джемом</a>
         </li>
         <li>
           <a href="blank.html">
             <img src="img/moroj6.jpg" width="267" height="267" alt="Мороженое сливочно-черничное с цельными ягодами черники">
           </a>
-          <div>410 ₽<span>/кг</span></div>
-          <a href="blank.html">Сливочно-черничное с цельными ягодами черники</a>
+          <div class="value">410 <span class="weight">/кг</span></div>
+          <a class="products-item__title" href="blank.html">Сливочно-черничное с цельными ягодами черники</a>
         </li>
         <li>
           <a href="blank.html">
             <img src="img/moroj7.jpg" width="267" height="267" alt="Мороженое сливочно-лимонное с карамельной присыпкой">
           </a>
-          <div>315 ₽<span>/кг</span></div>
-          <a href="blank.html">Сливочно-лимонное с карамельной присыпкой</a>
+          <div class="value">315 <span class="weight">/кг</span></div>
+          <a class="products-item__title" href="blank.html">Сливочно-лимонное с карамельной присыпкой</a>
         </li>
         <li>
           <a href="blank.html">
             <img src="img/moroj8.jpg" width="267" height="267" alt="Мороженое сливочное с шоколадной стружкой">
           </a>
-          <div>320 ₽<span>/кг</span></div>
-          <a href="blank.html">Сливочное с шоколадной стружкой</a>
+          <div class="value">320 <span class="weight">/кг</span></div>
+          <a class="products-item__title" href="blank.html">Сливочное с шоколадной стружкой</a>
         </li>
         <li>
           <a href="blank.html">
             <img src="img/moroj9.jpg" width="267" height="267" alt="Мороженое сливочно-ванильное с кусочками шоколада">
           </a>
-          <div>440 ₽<span>/кг</span></div>
-          <a href="blank.html">Сливочно-ванильное с кусочками шоколада</a>
+          <div class="value">440<span class="weight">/кг</span></div>
+          <a class="products-item__title" href="blank.html">Сливочно-ванильное с кусочками шоколада</a>
         </li>
         <li>
           <a href="blank.html">
             <img src="img/moroj10.jpg" width="267" height="267" alt="Мороженое сливочноe с ментоловым сиропом">
           </a>
-          <div>435 ₽<span>/кг</span></div>
-          <a href="blank.html">Сливочноe с ментоловым сиропом</a>
+          <div class="value">435 <span class="weight">/кг</span></div>
+          <a class="products-item__title" href="blank.html">Сливочноe с ментоловым сиропом</a>
         </li>
         <li>
           <a href="blank.html">
             <img src="img/moroj11.jpg" width="267" height="267" alt="Мороженое сливочное с кусочками черного шоколада">
           </a>
-          <div>355 ₽<span>/кг</span></div>
-          <a href="blank.html">Сливочное с кусочками черного шоколада</a>
+          <div class="value">355 <span class="weight">/кг</span></div>
+          <a class="products-item__title" href="blank.html">Сливочное с кусочками черного шоколада</a>
         </li>
         <li>
           <a href="blank.html">
             <img src="img/moroj12.jpg" width="267" height="267" alt="Мороженое сливочное с мятным сиропом">
           </a>
-          <div>420 ₽<span>/кг</span></div>
-          <a href="blank.html">Сливочное с мятным сиропом</a>
+          <div class="value">420 <span class="weight">/кг</span></div>
+          <a class="products-item__title" href="blank.html">Сливочное с мятным сиропом</a>
         </li>
       </ul>
       <ul class="paginator">
@@ -283,20 +285,20 @@
   <footer>
     <ul>
       <li>
-        <a href="#">Фейсбук</a>
+        <a class="facebook" href="#">Фейсбук</a>
       </li>
       <li>
-        <a href="#">Вконтакте</a>
+        <a class="vk" href="#">Вконтакте</a>
       </li>
       <li>
-        <a href="#">Инстаграм</a>
+        <a class="instagram" href="#">Инстаграм</a>
       </li>
       <li>
-        <a href="#">Твиттер</a>
+        <a class="twitter" href="#">Твиттер</a>
       </li>
     </ul>
-    <ul>
-      <li>
+    <ul class="footer-menu">
+      <li class="footer-menu_item-providers">
         <a href="#">Для поставщиков</a>
       </li>
       <li>
@@ -309,8 +311,8 @@
         <a href="#">Экологические стандарты</a>
       </li>
     </ul>
-    <p>
-      <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
+    <p class="footer-copyright">
+      <a class="footer-copyright__logo" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
       Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> © 2020
     </p>
   </footer>

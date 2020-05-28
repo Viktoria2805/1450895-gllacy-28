@@ -1,17 +1,19 @@
 @font-face {
   font-family: "Roboto";
-  src: url("../fonts/roboto.woff2") format("woff2"),
-  url("../fonts/roboto.woff") format("woff");
-  font-weight: normal;
   font-style: normal;
-}
+  font-weight: 400;
+  src: local("Roboto"),
+       url("../fonts/roboto.woff2") format("woff2"),
+       url("../fonts/roboto.woff") format("woff"),
+  }
 
 @font-face {
-  font-family: "Roboto-bold";
-  src: url("../fonts/robotobold.woff2") format("woff2"),
-  url("../fonts/robotobold.woff") format("woff");
-  font-weight: normal;
+  font-family: "Roboto";
   font-style: normal;
+  font-weight: 700;
+  src: local("Roboto"),
+       url("../fonts/robotobold.woff2") format("woff2"),
+       url("../fonts/robotobold.woff") format("woff"),
 }
 
 :root {
@@ -21,6 +23,14 @@
   --basic-white: #ffffff;
   --basic-black: #323232;
   --beige: #F8F7F4;
+  --text-shadow-red: rgba(160, 32, 11, 0.76);
+  --light-red: #F26843;
+  --orange: #E74A35;
+  --dark-red: rgba(172, 16, 0, 0.64);
+  --grey: rgba(255, 255, 255, 0.2);
+  --basic-red: #AC1000;
+  --dark: rgba(0, 0, 0, 0.07);
+  --active-red: #942718;
 }
 
 body {
@@ -90,7 +100,7 @@ li {
   font-weight: 700;
 }
 
-.user-navigation .header-contacts__tel {
+.user-navigation .header-contacts-tel {
   font-size: 22px;
   line-height: 24px;
 }
@@ -105,7 +115,7 @@ li {
   background-repeat: repeat;
 }
 
-.about-us__title {
+.about-us-title {
   font-size: 24px;
   line-height: 30px;
 }
@@ -151,56 +161,38 @@ li {
   color: var(--basic-white);
 }
 
-.footer-menu_item-providers {
+.footer-menu-item-providers {
   background-image: url(../img/heart.svg);
   background-repeat: no-repeat;
 }
 
-.facebook {
+.social-container a {
   text-indent: 100%;
   white-space: nowrap;
   overflow: hidden;
   display: block;
   width: 32px;
   height: 32px;
-  background-image: url(../img/fb.svg);
   background-repeat: no-repeat;
+}
+
+.facebook {
+  background-image: url(../img/fb.svg);
 }
 
 .vk {
-  text-indent: 100%;
-  white-space: nowrap;
-  overflow: hidden;
-  display: block;
-  width: 32px;
-  height: 32px;
   background-image: url(../img/vk.svg);
-  background-repeat: no-repeat;
-}
+ }
 
 .instagram {
-  text-indent: 100%;
-  white-space: nowrap;
-  overflow: hidden;
-  display: block;
-  width: 32px;
-  height: 32px;
   background-image: url(../img/instagram.svg);
-  background-repeat: no-repeat;
 }
 
 .twitter {
-  text-indent: 100%;
-  white-space: nowrap;
-  overflow: hidden;
-  display: block;
-  width: 32px;
-  height: 32px;
   background-image: url(../img/twitter.svg);
-  background-repeat: no-repeat;
 }
 
-.footer-copyright__logo {
+.footer-copyright-logo {
   text-indent: 100%;
   white-space: nowrap;
   overflow: hidden;
@@ -216,28 +208,26 @@ li {
   font-size: 32px;
   line-height: 30px;
   color: var(--basic-white);
-  text-shadow: 0px 2px 5px rgba(160, 32, 11, 0.76);
-    width: 279px;
-  height: 63px;
-  background: linear-gradient(180deg, #F26843 0%, #E74A35 100%);
-  box-shadow: 0px 2px 2px rgba(172, 16, 0, 0.64);
+  text-shadow: 0px 2px 5px var(--text-shadow-red);
+  background: linear-gradient(180deg, var(--light-red) 0%, var(--orange) 100%);
+  box-shadow: 0px 2px 2px var(--dark-red);
   border-radius: 50px;
 }
 
 .button:hover,
 .button:focus {
-  background: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), linear-gradient(180deg, #F26843 0%, #E74A35 100%);
-  box-shadow: 0px 2px 2px #AC1000;
+  background: linear-gradient(0deg, var(--grey), var(--grey)), linear-gradient(180deg, var(--light-red) 0%, var(--orange) 100%);
+  box-shadow: 0px 2px 2px var(--basic-red);
   border-radius: 50px;
 }
 
 .button:active {
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.07)), linear-gradient(180deg, #F26843 0%, #E74A35 100%);
-box-shadow: inset 0px 2px 2px #942718;
-border-radius: 50px;
+  background: linear-gradient(0deg, var(--dark), var(--dark)), linear-gradient(180deg, var(--light-red) 0%, var(--orange) 100%);
+  box-shadow: inset 0px 2px 2px var(--active-red);
+  border-radius: 50px;
 }
 
-.breadcrumbs a{
+.breadcrumbs a {
   color: var(--basic-white);
   text-decoration: underline;
   background-image: url(../img/icon-right-small.svg);
@@ -246,7 +236,7 @@ border-radius: 50px;
 
 .main-title {
   font-size: 35px;
-line-height: 41px;
+  line-height: 41px;
 }
 
 .value {
@@ -261,30 +251,30 @@ line-height: 41px;
   line-height: 35px;
 }
 
-.products-item__title  {
+.products-item-title {
   color: var(--basic-white);
   font-size: 16px;
   line-height: 22px;
 }
 
-.about-us__item-icecream {
+.about-us-item li {
+  background-repeat: no-repeat;
+}
+
+.about-us-item-icecream {
   background-image: url(../img/ice-cream.svg);
-  background-repeat: no-repeat;
-}
+ }
 
-.about-us__item-cow {
+.about-us-item-cow {
   background-image: url(../img/cow.svg);
-  background-repeat: no-repeat;
 }
 
-.about-us__item-eco {
+.about-us-item-eco {
   background-image: url(../img/eco.svg);
-  background-repeat: no-repeat;
 }
 
-.about-us__item-temp {
+.about-us-item-temp {
   background-image: url(../img/thermometer.svg);
-  background-repeat: no-repeat;
 }
 
 

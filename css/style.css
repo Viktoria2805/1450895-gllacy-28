@@ -325,8 +325,15 @@ li {
 .value {
   font-size: 45px;
   line-height: 45px;
-  background-image: url(../img/ruble.svg);
-  background-repeat: no-repeat;
+}
+
+.rub {
+  height: 1.5ex;
+}
+
+.dot {
+  position: absolute;
+  text-indent: -1000em;
 }
 
 .weight {

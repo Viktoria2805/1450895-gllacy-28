@@ -101,21 +101,87 @@ li {
   position: absolute;
   text-align: right;
   top: 40px;
+  right: 27px;
 }
 
-.user-navigation .header-contacts-tel {
+.header-contacts-tel {
   font-size: 22px;
   line-height: 24px;
+  color: var(--basic-white);
 }
 
 .modal {
   display: none;
 }
 
+.slider-items {
+  text-align: center;
+}
+
+.slide-title {
+  display: block;
+  font-size: 60px;
+  line-height: 60px;
+  font-weight: 700;
+}
+
+.slider-controls {
+  display: flex;
+  justify-content: start;
+}
+
+.slider-controls  li:not(:last-of-type) {
+  margin-right: 8px;
+}
+
+.promo {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.promo-item {
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+  border-radius: 16px;
+  width: 560px;
+  min-height: 229px;
+  padding-top: 16px;
+}
+
+.promo-item-raspberry {
+  background-image: url(../img/malina-background.jpg);
+}
+
+.promo-item-chocolate {
+  background-image: url(../img/choko-background.jpg);
+}
+.promo-item span {
+  font-weight: 700;
+  font-size: 35px;
+  line-height: 41px;
+  padding-left: 16px;
+}
+
+.promo-item p {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 22px;
+  padding-left: 16px;
+}
+
+.promo-hits {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  align-content: start;
+}
+
 .about-us {
   color: var(--basic-black);
   background-image: url(../img/pattern.jpg);
   background-repeat: repeat;
+  border-radius: 16px;
 }
 
 .about-us-title {
@@ -127,7 +193,9 @@ li {
   color: var(--basic-black);
   background-image: url(../img/strawberry.jpg);
   background-repeat: no-repeat;
+  border-radius: 16px;
   width: 560px;
+  min-height: 220px;
 }
 
 .news h3 {
@@ -146,9 +214,19 @@ li {
 .subscription {
   color: var(--basic-black);
   background-color: var(--beige);
+  border-radius: 16px;
+  margin: 0;
+  padding: 5px;
+  min-height: 200px;
+}
+
+.subscription-widjet {
   background-image: url(../img/bg-post.svg);
   background-repeat: no-repeat;
   width: 560px;
+  border-radius: 16px;
+  padding: 6px;
+  box-sizing: border-box;
 }
 
 .footer-menu a {
@@ -260,6 +338,8 @@ li {
   color: var(--basic-white);
   font-size: 16px;
   line-height: 22px;
+  display: block;
+  text-align: center;
 }
 
 .about-us-item li {
@@ -303,6 +383,7 @@ li {
   flex-grow: 1;
   flex-wrap: wrap;
   width: 1146px;
+  position: relative;
 }
 
 .header-navigation {
@@ -327,34 +408,26 @@ li {
 }
 
 .container {
-  width: 1146px;
+  width: 1200px;
   margin: 0 auto;
+  box-sizing: border-box;
+  padding-left: 27px;
+  padding-right: 27px;
 }
 
 .user-navigation {
   outline: 1px solid blue;
   flex-wrap: wrap;
   display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  justify-content: space-between;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: flex-end;
   flex-grow: 1;
   width: 267px;
   position: relative;
 }
 
-.user-nav-item {
-  outline: 1px solid brown;
-  display: flex;
-  flex-direction: row;
-  align-items: stretch;
-  justify-content: flex-end;
-  padding-top: 23px;
-  width: 267px;
-  flex-grow: 1;
-}
-
-.user-nav-item > a:not(:last-of-type) {
+.user-nav-item:not(:last-of-type) {
   margin-right: 10px;
 }
 
@@ -368,6 +441,7 @@ li {
 .columns {
  display: flex;
  justify-content: space-between;
+ outline: 1px solid rebeccapurple;
 }
 
 .page-footer {
@@ -396,29 +470,57 @@ li {
   grid-template-rows: 1fr 1fr;
  }
 
-
 /*  BREADCRUMBS */
-.breadcrumbs li {
-display: inline-block;
-padding-left: 0px;
+.breadcrumbs li:not(:first-of-type) {
+  padding-left: 8px;
 }
 
 .breadcrumbs {
-  padding: 0px;
+  display: flex;
+  flex-direction: row;
   margin-top: 28px;
   margin-bottom: 13px;
 }
 
 /** Catalog */
 
+.filters-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  align-items: flex-start;
+  width: 869px;
+  margin-top: 29px;
+  margin-bottom: 40px;
+}
+
+.filter-item {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
 .products-item {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
   align-content: center;
 }
 
-.products-item li {
-  text-align: center;
-  width: 267px;
+.paginator {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.paginator li:not(:last-of-type) {
+  margin-right: 20px;
+  margin-bottom: 37px;
+  margin-top: 102px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.paginator a {
+  color: var(--basic-white);
 }
